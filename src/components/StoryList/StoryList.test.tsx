@@ -82,8 +82,8 @@ test("navigates to the previous and next stories manually", () => {
   const thumbnail = screen.getAllByRole("img")[1];
   fireEvent.click(thumbnail);
 
-  const leftNav = screen.getByText("X").parentElement!.children[2];
-  const rightNav = screen.getByText("X").parentElement!.children[3];
+  const leftNav = screen.getByTestId("left-nav");
+  const rightNav = screen.getByTestId("right-nav");
 
   // Click to navigate to the next story
   fireEvent.click(rightNav);

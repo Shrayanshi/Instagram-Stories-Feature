@@ -53,8 +53,16 @@ const Story: React.FC<StoryProps> = ({
       <div className="progress-bar-container">
         <div className="progress-bar" style={{ width: `${progress}%` }}></div>
       </div>
-      <div className="story-nav left" onClick={onPrevious}></div>
-      <div className="story-nav right" onClick={onNext}></div>
+      <div
+        className="story-nav left"
+        data-testid="left-nav"
+        onClick={onPrevious}
+      ></div>
+      <div
+        className="story-nav right"
+        data-testid="right-nav"
+        onClick={onNext}
+      ></div>
     </div>
   );
 };

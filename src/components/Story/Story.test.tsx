@@ -22,7 +22,7 @@ test("renders the story image", () => {
 // Test to ensure onNext is called when the right side is clicked
 test("calls onNext when the right side is clicked", () => {
   render(<Story {...mockProps} />);
-  const rightNav = screen.getByText("X").parentElement!.children[3];
+  const rightNav = screen.getByTestId("right-nav");
   fireEvent.click(rightNav);
   expect(mockProps.onNext).toHaveBeenCalled();
 });
@@ -30,7 +30,7 @@ test("calls onNext when the right side is clicked", () => {
 // Test to ensure onPrevious is called when the left side is clicked
 test("calls onPrevious when the left side is clicked", () => {
   render(<Story {...mockProps} />);
-  const leftNav = screen.getByText("X").parentElement!.children[2];
+  const leftNav = screen.getByTestId("left-nav");
   fireEvent.click(leftNav);
   expect(mockProps.onPrevious).toHaveBeenCalled();
 });
